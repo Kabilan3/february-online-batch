@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+
+    <body>
+        <h1>JavaScript</h1>
+
+        <div id="div1">
+            <h2>Test content goes here...</h2>
+        </div>
+
+        <input type="button" id="btnClick" value="Click">
+
+        <script>
+            document.querySelector("#div1").addEventListener("click", () => {
+                console.log(document.querySelector("#div1").innerText);
+            });
+
+            document.querySelector("#btnClick").addEventListener("click", () => {
+                var p = document.createElement("p");
+                p.innerHTML = "<strong>New Paragraph created</strong>";
+                p.setAttribute("style", "color:red;");
+
+                var div = document.querySelector("#div1");
+                div.append(p);
+            });
+        </script>
+    </body>
+
+</html>
